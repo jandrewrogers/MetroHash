@@ -1,4 +1,4 @@
-## MetroHash: Faster, Stronger Hash Functions
+## MetroHash: Faster, Better Hash Functions
 
 MetroHash is a set of state-of-the-art hash functions for *non-cryptographic* use cases. They are notable for being algorithmically generated in addition to their exceptional performance. The set of published hash functions may be expanded in the future, having been selected from a very large set of hash functions that have been constructed this way.
 

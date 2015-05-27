@@ -2,7 +2,7 @@
 
 MetroHash is a set of state-of-the-art hash functions for *non-cryptographic* use cases. They are notable for being algorithmically generated in addition to their exceptional performance. The set of published hash functions may be expanded in the future, having been selected from a very large set of hash functions that have been constructed this way.
 
-* Fastest general-purpose functions for bulk hashing. 24+ GB/s common for the metro128crc variants.
+* Fastest general-purpose functions for bulk hashing. 24+ GB/s for metro128crc variants.
 * Fastest general-purpose functions for small, variable length keys. 
 * Robust statistical bias profile, similar to the MD5 cryptographic hash.
 * 64-bit, 128-bit, and 128-bit CRC variants currently available.

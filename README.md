@@ -28,11 +28,11 @@ A big change is that these new algorithms are implemented as C++ classes that su
 
 **Usage Example For Incremental Hashing**
 
-`MetroHash128 hasher;`
-`hasher.Update(partial_key, partial_key_length);`
-`...`
-`hasher.Update(partial_key, partial_key_length);`
-`hasher.Finalize(hash_ptr);`
+`MetroHash128 hasher;`  
+`hasher.Update(partial_key, partial_key_length);`  
+`...`  
+`hasher.Update(partial_key, partial_key_length);`  
+`hasher.Finalize(hash_ptr);`  
 
 An `Initialize(seed)` method allows the hasher objects to be reused.
 

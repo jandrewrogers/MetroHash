@@ -24,8 +24,10 @@
 //
 
 
-#include "metrohash.h"
 #include <nmmintrin.h>
+#include <string.h>
+#include "metrohash.h"
+#include "platform.h"
 
 
 void metrohash128crc_1(const uint8_t * key, uint64_t len, uint32_t seed, uint8_t * out)

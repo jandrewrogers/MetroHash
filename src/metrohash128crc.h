@@ -1,4 +1,4 @@
-// metrohash.h
+// metrohash128crc.h
 //
 // The MIT License (MIT)
 //
@@ -23,11 +23,14 @@
 // SOFTWARE.
 //
 
-#ifndef METROHASH_METROHASH_H
-#define METROHASH_METROHASH_H
+#ifndef METROHASH_METROHASH_128_CRC_H
+#define METROHASH_METROHASH_128_CRC_H
 
-#include "metrohash64.h"
-#include "metrohash128.h"
-#include "metrohash128crc.h"
+#include <stdint.h>
 
-#endif // #ifndef METROHASH_METROHASH_H
+// Legacy 128-bit hash functions
+void metrohash128crc_1(const uint8_t * key, uint64_t len, uint32_t seed, uint8_t * out);
+void metrohash128crc_2(const uint8_t * key, uint64_t len, uint32_t seed, uint8_t * out);
+
+
+#endif // #ifndef METROHASH_METROHASH_128_CRC_H

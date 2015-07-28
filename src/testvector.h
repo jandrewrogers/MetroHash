@@ -46,6 +46,8 @@ struct TestVectorData
 
 static const char * test_key_63 = "012345678901234567890123456789012345678901234567890123456789012";
 
+// The hash assumes a little-endian architecture. Treating the hash results
+// as an array of uint64_t should enable conversion for big-endian implementations.
 const TestVectorData TestVector [] = 
 {
 	// seed = 0

@@ -1,4 +1,4 @@
-// metrohash.h
+// platform.h
 //
 // The MIT License (MIT)
 //
@@ -23,11 +23,37 @@
 // SOFTWARE.
 //
 
-#ifndef METROHASH_METROHASH_H
-#define METROHASH_METROHASH_H
+#ifndef METROHASH_PLATFORM_H
+#define METROHASH_PLATFORM_H
 
-#include "metrohash64.h"
-#include "metrohash128.h"
-#include "metrohash128crc.h"
+#include <stdint.h>
 
-#endif // #ifndef METROHASH_METROHASH_H
+// rotate right idiom recognized by most compilers
+inline static uint64_t rotate_right(uint64_t v, unsigned k)
+{
+    return (v >> k) | (v << (64 - k));
+}
+
+// unaligned reads, fast and safe on Nehalem and later microarchitectures
+inline static uint64_t read_u64(const void * const ptr)
+{
+    return static_cast<uint64_t>(*reinterpret_cast<const uint64_t*>(ptr));
+}
+
+inline static uint64_t read_u32(const void * const ptr)
+{
+    return static_cast<uint64_t>(*reinterpret_cast<const uint32_t*>(ptr));
+}
+
+inline static uint64_t read_u16(const void * const ptr)
+{
+    return static_cast<uint64_t>(*reinterpret_cast<const uint16_t*>(ptr));
+}
+
+inline static uint64_t read_u8 (const void * const ptr)
+{
+    return static_cast<uint64_t>(*reinterpret_cast<const uint8_t *>(ptr));
+}
+
+
+#endif // #ifndef METROHASH_PLATFORM_H

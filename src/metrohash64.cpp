@@ -67,7 +67,7 @@ void MetroHash64::Update(const uint8_t * const buffer, const uint64_t length)
         if (fill > length)
             fill = length;
 
-        memcpy(input.b + (bytes % 32), ptr, fill);
+        memcpy(input.b + (bytes % 32), ptr, (size_t) fill);
         ptr   += fill;
         bytes += fill;
         

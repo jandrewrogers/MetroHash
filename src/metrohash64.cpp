@@ -23,9 +23,10 @@
 // SOFTWARE.
 //
 
-#include <string.h>
 #include "platform.h"
 #include "metrohash64.h"
+
+#include <cstring>
 
 const char * MetroHash64::test_string = "012345678901234567890123456789012345678901234567890123456789012";
 
@@ -82,7 +83,7 @@ void MetroHash64::Update(const uint8_t * const buffer, const uint64_t length)
     }
     
     // bulk update
-    bytes += (end - ptr);
+    bytes += static_cast<uint64_t>(end - ptr);
     while (ptr <= (end - 32))
     {
         // process directly from the source, bypassing the input buffer
@@ -94,7 +95,7 @@ void MetroHash64::Update(const uint8_t * const buffer, const uint64_t length)
     
     // store remaining bytes in input buffer
     if (ptr < end)
-        memcpy(input.b, ptr, end - ptr);
+        memcpy(input.b, ptr, static_cast<size_t>(end - ptr));
 }
 
 

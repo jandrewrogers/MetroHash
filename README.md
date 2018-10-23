@@ -14,6 +14,10 @@ You can read more about the design and history [here](http://www.jandrewrogers.c
 
 ## News
 
+### 23 October 2018
+
+The project has been re-licensed under Apache License v2.0. The purpose of this license change is consistency with the imminent release of MetroHash v2.0, which is also licensed under the Apache license.
+
 ### 27 July 2015
 
 Two new 64-bit and 128-bit algorithms add the ability to construct hashes incrementally. In addition to supporting incremental construction, the algorithms are slightly superior to the prior versions. 

@@ -17,8 +17,8 @@
 #ifndef METROHASH_METROHASH_H
 #define METROHASH_METROHASH_H
 
-#include "metrohash64.h"
-#include "metrohash128.h"
-#include "metrohash128crc.h"
+#include <metrohash/MetroHash64.h>
+#include <metrohash/MetroHash128.h>
+#include <metrohash/MetroHash128crc.h>
 
 #endif // #ifndef METROHASH_METROHASH_H

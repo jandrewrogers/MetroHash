@@ -15,10 +15,11 @@
 // limitations under the License.
 
 
+// SSE4.2 -> https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u64
 #include <nmmintrin.h>
 #include <string.h>
-#include "metrohash.h"
-#include "platform.h"
+#include <metrohash/MetroHash128crc.h>
+#include "Platform.h"
 
 
 void metrohash128crc_1(const uint8_t * key, uint64_t len, uint32_t seed, uint8_t * out)

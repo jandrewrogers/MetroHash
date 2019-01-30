@@ -14,8 +14,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "platform.h"
-#include "metrohash64.h"
+#include "Platform.h"
+#include <metrohash/MetroHash64.h>
 
 #include <cstring>
 

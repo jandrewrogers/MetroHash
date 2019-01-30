@@ -15,8 +15,8 @@
 // limitations under the License.
 
 #include <string.h>
-#include "platform.h"
-#include "metrohash128.h"
+#include "Platform.h"
+#include <metrohash/MetroHash128.h>
 
 const char * MetroHash128::test_string = "012345678901234567890123456789012345678901234567890123456789012";
 

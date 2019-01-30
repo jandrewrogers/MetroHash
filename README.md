@@ -22,7 +22,7 @@ The project has been re-licensed under Apache License v2.0. The purpose of this 
 
 Two new 64-bit and 128-bit algorithms add the ability to construct hashes incrementally. In addition to supporting incremental construction, the algorithms are slightly superior to the prior versions. 
 
-A big change is that these new algorithms are implemented as C++ classes that support both incremental and stateless hashing. These classes also have a static method for verifying the implementation against the test vectors built into the classes. Implementations are now fully contained by their respective headers e.g. "metrohash128.h".
+A big change is that these new algorithms are implemented as C++ classes that support both incremental and stateless hashing. These classes also have a static method for verifying the implementation against the test vectors built into the classes. Implementations are now fully contained by their respective headers e.g. "metrohash/MetroHash128.h".
 
 *Note: an incremental version of the 128-bit CRC version is on its way but is not included in this push.*
 

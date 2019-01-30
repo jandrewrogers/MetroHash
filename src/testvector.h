@@ -17,7 +17,7 @@
 #ifndef METROHASH_TESTVECTOR_H
 #define METROHASH_TESTVECTOR_H
 
-#include "metrohash.h"
+#include <metrohash/MetroHash.h>
 
 
 typedef void (*HashFunction) (const uint8_t * key, uint64_t len, uint32_t seed, uint8_t * hash);
